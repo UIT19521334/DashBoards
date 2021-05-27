@@ -41,6 +41,10 @@ class StorageInfoCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText2
+                        .copyWith(color: Colors.black),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -49,13 +53,19 @@ class StorageInfoCard extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .caption
-                        .copyWith(color: Colors.white70),
+                        .copyWith(color: Colors.black),
                   ),
                 ],
               ),
             ),
           ),
-          Text(amountOfFiles)
+          Text(
+            amountOfFiles,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2
+                .copyWith(color: Colors.black),
+          )
         ],
       ),
     );

@@ -36,7 +36,7 @@ List demoMyFiels = [
     title: "One Drive",
     numOfFiels: 1328,
     svgSrc: "assets/icons/one_drive.svg",
-    totalStorage: "1GB",
+    totalStorage: "2GB",
     color: Color(0xFFA4CDFF),
     percentage: 10,
   ),

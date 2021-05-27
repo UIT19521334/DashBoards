@@ -28,14 +28,17 @@ class Chart extends StatelessWidget {
               children: [
                 SizedBox(height: defaultPadding),
                 Text(
-                  "29.1",
+                  "30",
                   style: Theme.of(context).textTheme.headline4.copyWith(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.w600,
                         height: 0.5,
                       ),
                 ),
-                Text("of 128GB")
+                Text("of 256GB",
+                    style: Theme.of(context).textTheme.bodyText2.copyWith(
+                          color: Colors.black,
+                        ))
               ],
             ),
           ),

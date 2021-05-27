@@ -22,7 +22,10 @@ class RecentFiles extends StatelessWidget {
         children: [
           Text(
             "Recent Files",
-            style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context)
+                .textTheme
+                .subtitle1
+                .copyWith(color: Colors.black),
           ),
           SizedBox(
             width: double.infinity,
@@ -31,13 +34,31 @@ class RecentFiles extends StatelessWidget {
               columnSpacing: defaultPadding,
               columns: [
                 DataColumn(
-                  label: Text("File Name"),
+                  label: Text(
+                    "File Name",
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText2
+                        .copyWith(color: Colors.black),
+                  ),
                 ),
                 DataColumn(
-                  label: Text("Date"),
+                  label: Text(
+                    "Date",
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText2
+                        .copyWith(color: Colors.black),
+                  ),
                 ),
                 DataColumn(
-                  label: Text("Size"),
+                  label: Text(
+                    "Size",
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText2
+                        .copyWith(color: Colors.black),
+                  ),
                 ),
               ],
               rows: List.generate(
@@ -65,13 +86,14 @@ DataRow recentFileDataRow(RecentFile fileInfo) {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
-              child: Text(fileInfo.title),
+              child:
+                  Text(fileInfo.title, style: TextStyle(color: Colors.black)),
             ),
           ],
         ),
       ),
-      DataCell(Text(fileInfo.date)),
-      DataCell(Text(fileInfo.size)),
+      DataCell(Text(fileInfo.date, style: TextStyle(color: Colors.black))),
+      DataCell(Text(fileInfo.size, style: TextStyle(color: Colors.black))),
     ],
   );
 }
